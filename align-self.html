@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos align self</title>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 3px solid black;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .flex-item {
+            background-color: orangered;
+            color: whitesmoke;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .center {
+            align-self: center;
+        }
+
+        .start {
+            align-self: flex-start;
+        }
+
+        .end {
+            align-self: flex-end;
+        }
+
+        .baseline {
+            align-self: baseline;
+        }
+
+        .stretch {
+            align-self: stretch;
+        }
+
+        .aouto {
+            align-self: auto;
+        }
+        .direct{
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>row</h1>
+    <div class="flex-container align-center">
+        <div class="flex-item auto">132</div>
+        <div class="flex-item auto">2</div>
+        <div class="flex-item auto">3232 hdhuisa hdua uiahsd duh uiu s as dhuia sauhuhsa</div>
+        <div class="flex-item auto">43</div>
+    </div>
+
+    <div class="flex-container">
+        <div class="flex-item center">132</div>
+        <div class="flex-item start">2</div>
+        <div class="flex-item ">3232 hdhuisa hdua uiahsd duh uiu s as dhjddjjs</div>
+        <div class="flex-item end">43</div>
+    </div>
+
+
+    <div class="flex-container">
+        <div class="flex-item center">132</div>
+        <div class="flex-item start">225</div>
+        <div class="flex-item stretch ">3232 hdhuisa hdua uiahsd duh uiu </div>
+        <div class="flex-item end">43jfds</div>
+    </div>
+
+    <h1>column</h1>
+    <div class="flex-container align-center direct">
+        <div class="flex-item auto">132</div>
+        <div class="flex-item auto">2</div>
+        <div class="flex-item auto">3232 hdhuisa hdua uiahsd duh uiu s as dhuia sauhuhsa</div>
+        <div class="flex-item auto">43</div>
+    </div>
+
+    <div class="flex-container direct">
+        <div class="flex-item center">132</div>
+        <div class="flex-item start">2</div>
+        <div class="flex-item ">3232 hdhuisa hdua uiahsd duh uiu s as dhjddjjs</div>
+        <div class="flex-item end">43</div>
+    </div>
+
+
+    <div class="flex-container direct">
+        <div class="flex-item center">132</div>
+        <div class="flex-item start">225</div>
+        <div class="flex-item stretch ">3232 hdhuisa hdua uiahsd duh uiu </div>
+        <div class="flex-item end">43jfds</div>
+    </div>
+
+</body>
+
+</html>

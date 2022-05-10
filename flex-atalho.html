@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos flex-shrink</title>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 3px solid black;
+            max-width: 400px;
+            margin: 10px;
+        }
+
+        .flex-item {
+            background-color: orangered;
+            margin: 5px;
+            text-align: center;
+            color: whitesmoke;
+            font-size: 24px;
+        }
+
+        .flex-1 {
+            flex: 1;
+            /* grow = 1 shring = 1 basis = 0 */
+        }
+
+        .largura{
+            width: 200px;
+        }
+        .flex-2 {
+            flex: 2;
+            /* grow = 2 shring = 1 basis = 0 */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flex 1</h1>
+    <div class="flex-container">
+        <div class="flex-item flex-1 ">1</div>
+        <div class="flex-item flex-1 ">2222</div>
+        <div class="flex-item flex-1 ">33</div>
+        <div class="flex-item flex-1 ">4</div>
+        <div class="flex-item flex-1 ">55</div>
+    </div>
+
+    <h1>Flex 1 e 2</h1>
+    <div class="flex-container">
+        <div class="flex-item flex-1 ">1</div>
+        <div class="flex-item flex-2 ">2222</div>
+        <div class="flex-item flex-2 ">33</div>
+        <div class="flex-item flex-1 ">4</div>
+        <div class="flex-item flex-1 ">55</div>
+    </div>
+
+    <h1>width ignorado basis = 0</h1>
+    <div class="flex-container">
+        <div class="flex-item flex-1 largura">1</div>
+        <div class="flex-item flex-1 largura">2222</div>
+        <div class="flex-item flex-1 largura">33</div>
+        <div class="flex-item flex-1 largura">4</div>
+        <div class="flex-item flex-1 largura">55</div>
+    </div>
+
+</body>
+
+</html>
